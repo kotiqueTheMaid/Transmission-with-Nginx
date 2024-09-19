@@ -71,7 +71,7 @@ Create a file called `transmission` `$ touch transmission`.
 
 Edit the file `$ nano transmission`.
 
-I used configuration that I found in [thread on github](https://gist.github.com/Belphemur/47f76c40defef0269615) posted by [Zen3515](https://gist.github.com/Zen3515). Copy [this](https://pastebin.com/htVrnpbD) from pastebin into your `transmission` file and edit server name and ssl certificates paths.
+I used configuration that I found [here](https://gist.github.com/Belphemur/47f76c40defef0269615) posted by [Zen3515](https://gist.github.com/Zen3515). Copy [this](https://pastebin.com/htVrnpbD) from pastebin and paste it in your `transmission` file. Edit server name and ssl certificates paths.
 
 Reload your Nginx server `$ sudo systemctl reload nginx`.
 
