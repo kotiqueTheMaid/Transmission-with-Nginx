@@ -26,25 +26,33 @@ Step 1: Install Transmission daemon. <a name="tinstall"></a>
 Add the latest PPA repository: `$ sudo add-apt-repository ppa:transmissionbt/ppa`
 Update repositories and install transmission: `$ sudo apt-get install transmission-cli transmission-common transmission-daemon`.
 
-Step 2: Configure  Transmission Daemon<a name="tconf"></a>
+Step 2: Configure  Transmission Daemon<a name="tconf"></a>.
+
 Before making any changes stop the daemon. 
 `$ sudo systemctl stop transmission-daemon`.
 
-Daemon settings are defined in `/var/lib/transmission-daemon/info/settings.json`
-Make a copy of default configuration file in case of broken config.
+Daemon settings are defined in `/var/lib/transmission-daemon/info/settings.json`.
+
+Make a copy of default configuration file to recover from it in case of broken configuration.
 `$ cp /var/lib/transmission-daemon/info/settings.json /var/lib/transmission-daemon/info/settings_copy.json`.
+
 Edit config with any desired text editor. I am going to use nano. `$ sudo nano /var/lib/transmission-daemon/info/settings.json`
-Setting rpc-password contains hashed password from your rpc. `"rpc-password": "{62b16db87b89a91dd49a5110a7cafc06d20eb4f2wtK6kqPj",` Change it to any desired password. It will get hashed after the daemon starts.
+
+Setting <em>rpc-password</em> contains hashed password from your rpc.`"rpc-password": "{62b16db87b89a91dd49a5110a7cafc06d20eb4f2wtK6kqPj",` 
+
+Change it to any desired password. It will get hashed after the daemon starts.
+
 ``"rpc-password": "example_password",``
 Optional: change your username.
 `"rpc-username": "example_usernmae",`.
+
 Restart `transmission-daemon`
 `$ sudo systemctl restart transmission-daemon`.
 
 ### Nginx Setup <a name="nsetup"></a>
-Step 3: Installing Nginx server <a name="nisntall"></a>
+Step 3: Installing Nginx server <a name="ninstall"></a>
 
-Follow this official [guide](#https://nginx.org/en/linux_packages.html) from nginx.org.
+Follow this official [guide](https://nginx.org/en/linux_packages.html) from nginx.org.
 
 Step 4: Obtaining certificates <a name="obcert"></a>
 
