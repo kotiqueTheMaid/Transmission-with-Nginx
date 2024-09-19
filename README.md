@@ -56,7 +56,10 @@ Follow this official [guide](https://nginx.org/en/linux_packages.html) from ngin
 
 Step 4: Obtaining certificates <a name="obcert"></a>
 
-Navigate to [certbot website](https://certbot.eff.org/instructions?ws=nginx&os=snap) and follow the steps. **Important** use `$ sudo certbot --nginx` to install certificates. Memorize paths for your certificates, normally they can be located at `/etc/letsencrypt/live/your.domain.name/`
+Navigate to [certbot website](https://certbot.eff.org/instructions?ws=nginx&os=snap) and follow the steps. **Important** use `$ sudo certbot --nginx` to install certificates. 
+
+Memorize paths for your certificates, normally they can be located at `/etc/letsencrypt/live/your.domain.name/`
+
 Now try to access your server with its URL. It should display nginx default webpage with secure connection enabled.
 
 ### Running Transmission with Nginx<a name="runtr"></a>
